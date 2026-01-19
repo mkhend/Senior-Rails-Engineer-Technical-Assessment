@@ -1,0 +1,16 @@
+<% summary = campaign.progress_summary %>
+<div class="flex flex-wrap items-center justify-between gap-4">
+  <div>
+    <p class="text-sm text-slate-500">Delivery progress</p>
+    <p class="text-2xl font-semibold text-slate-900">
+      Sent <span class="text-indigo-600"><%= summary[:sent] %></span> of <%= summary[:total] %>
+    </p>
+  </div>
+  <div class="flex items-center gap-2">
+    <span class="rounded-full px-3 py-1 text-xs font-semibold <%= status_badge_class(campaign.status) %>">
+      <%= campaign.status.capitalize %>
+    </span>
+    <span class="text-xs text-slate-500">Updated <%= time_ago_in_words(campaign.updated_at) %> ago</span>
+  </div>
+</div>
+

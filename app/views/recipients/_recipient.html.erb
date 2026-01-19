@@ -1,0 +1,12 @@
+<li id="<%= dom_id(recipient) %>" class="rounded-xl border border-slate-100 px-4 py-3">
+  <div class="flex items-center justify-between">
+    <div>
+      <p class="text-sm font-semibold text-slate-900"><%= recipient.name %></p>
+      <p class="text-xs text-slate-500"><%= recipient.email %></p>
+    </div>
+    <span class="rounded-full px-3 py-1 text-xs font-semibold <%= status_badge_class(recipient.status) %>">
+      <%= recipient.status.capitalize %>
+    </span>
+  </div>
+</li>
+
