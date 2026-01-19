@@ -11,7 +11,6 @@ RSpec.describe DispatchCampaignJob, type: :job do
     described_class.perform_now(campaign.id)
 
     expect(campaign.reload.status).to eq("completed")
-    expect(campaign.recipients.pluck(:status).uniq).to eq(["sent"])
+    expect(campaign.recipients.pluck(:status).uniq).to eq([ "sent" ])
   end
 end
-

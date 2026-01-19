@@ -62,11 +62,11 @@ class CampaignsController < ApplicationController
     if line.include?("<") && line.include?(">")
       name = line.split("<").first.to_s.strip
       email = line[/<(.*?)>/, 1].to_s.strip
-      return [name, email]
+      return [ name, email ]
     end
 
     parts = line.split(/,|;/).map(&:strip)
-    [parts[0], parts[1]]
+    [ parts[0], parts[1] ]
   end
 
   def render_index_with_errors
@@ -74,4 +74,3 @@ class CampaignsController < ApplicationController
     render :index, status: :unprocessable_entity
   end
 end
-

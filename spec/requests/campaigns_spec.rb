@@ -25,4 +25,3 @@ RSpec.describe "Campaigns", type: :request do
     expect(response).to redirect_to(campaign_path(campaign))
   end
 end
-

@@ -44,4 +44,3 @@ class DispatchCampaignJob < ApplicationJob
     )
   end
 end
-

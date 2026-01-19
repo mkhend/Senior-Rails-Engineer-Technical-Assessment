@@ -21,4 +21,3 @@ RSpec.describe "Campaign dispatch", type: :system do
     expect(page).to have_content("Sent 2 of 2", wait: 5)
   end
 end
-

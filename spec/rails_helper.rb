@@ -67,7 +67,7 @@ RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
 
   config.before(:each, type: :system) do
-    driven_by :selenium, using: :headless_chrome, screen_size: [1400, 1400]
+    driven_by :selenium, using: :headless_chrome, screen_size: [ 1400, 1400 ]
     ActiveJob::Base.queue_adapter = :inline
   end
 
